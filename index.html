@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="BATicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/Default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Расчёт аккумуляторов</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="batAssembly">
+            <div class="General">
+                <div class="element">0 mAh</div>
+                <div class="summCapacityInQuantity">Общая 0 mAh</div>
+            </div>
+        </div>
+        <div class="input">
+            <div class="BATQuantity">
+                <p>Количество параллельных соединений</p>
+                <input id="QuantityBats" name="QuantityBats" type="number" min="0" max="10" onchange='ReadQuantityBats()'>
+            </div>
+            <br><br><br>
+            <div class="CapacityInput">
+                <p>Ёмкость аккумулятора</p>
+                <input disabled id="CapacityBat" name="CapacityBat" type="number" min="0" max="3000">
+                <button disabled id='supplyCapacity' onclick="AbbBat()">Добавить</button>
+            </div>
+            <div class="VoltageInput">
+                <p>Напряжение аккумулятора</p>
+                <input disabled id="VoltageBat" type="number">
+            </div>
+            <p class="CapacityAhWh">Ёмкость : 0 mAh / 0 Wh</p>
+            <button class="Supply" onclick="StartСomparison();">Расчитать</button>
+            <button class="Reset" onclick="location.reload(true)">Сбросить</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/BuildСomparison.js"></script>
+</body>
+</html>
