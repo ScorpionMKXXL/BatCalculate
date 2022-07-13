@@ -55,12 +55,14 @@
 }
 .Supply {
     border: 0;
+    outline: 4px solid #0a0;
     height: 40px;
     width: 160px;
     position: absolute;
     bottom: 20px;
     left: calc(50% - 80px);
 }
+.Supply:focus { outline-color: #339; }
 .Reset {
     position: absolute;
     height: 40px;
